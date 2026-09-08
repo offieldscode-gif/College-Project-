@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBA | Business Administration</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#120b16;
+    color:#fff5fb;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    filter:blur(110px);
+    z-index:-1;
+}
+
+body::before{
+    background:#ff4f9a;
+    top:-130px;
+    left:-120px;
+    opacity:.18;
+}
+
+body::after{
+    background:#ff9f43;
+    bottom:-140px;
+    right:-100px;
+    opacity:.17;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:20;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(20,10,22,.75);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,120,180,.2);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#ff72b6;
+}
+
+.back{
+    text-decoration:none;
+    color:white;
+    padding:10px 18px;
+    border:1px solid #ff72b6;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.back:hover{
+    background:#ff72b6;
+    color:#180b13;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:85px 20px 55px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:30px;
+    color:#ff9bc8;
+    background:rgba(255,80,150,.08);
+    border:1px solid rgba(255,100,170,.3);
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,78px);
+    margin-bottom:18px;
+    background:linear-gradient(90deg,#ff72b6,#ffb15c);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#cbb5c2;
+    font-size:18px;
+}
+
+/* STATS */
+.stats{
+    width:86%;
+    margin:20px auto 65px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat{
+    padding:27px;
+    text-align:center;
+    border-radius:22px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,110,170,.18);
+    backdrop-filter:blur(18px);
+}
+
+.stat h2{
+    font-size:32px;
+    color:#ff86bd;
+}
+
+.stat p{
+    margin-top:7px;
+    color:#a995a0;
+}
+
+/* MAIN */
+.container{
+    width:86%;
+    margin:auto;
+}
+
+.section-title{
+    margin:55px 0 25px;
+    font-size:32px;
+    color:#ff86bd;
+}
+
+/* ABOUT */
+.about{
+    padding:32px;
+    border-radius:26px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,110,170,.17);
+    line-height:1.9;
+    color:#cbbbc4;
+}
+
+/* SEMESTERS */
+.semesters{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.card{
+    padding:28px;
+    border-radius:24px;
+    background:linear-gradient(
+        145deg,
+        rgba(255,90,160,.08),
+        rgba(255,160,80,.035)
+    );
+    border:1px solid rgba(255,110,170,.17);
+    backdrop-filter:blur(16px);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#ff72b6;
+    box-shadow:0 18px 40px rgba(255,80,150,.12);
+}
+
+.card h3{
+    color:#ff9bc8;
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card li{
+    padding:10px 0;
+    color:#c5b4bd;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.card li::before{
+    content:"◆ ";
+    color:#ff9d57;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    padding:13px 19px;
+    border-radius:30px;
+    background:rgba(255,90,160,.07);
+    border:1px solid rgba(255,120,180,.2);
+    color:#ffd1e5;
+}
+
+/* CAREERS */
+.careers{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.career{
+    padding:27px;
+    min-height:170px;
+    border-radius:24px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,120,180,.17);
+    transition:.3s;
+}
+
+.career:hover{
+    transform:translateY(-6px);
+    background:rgba(255,90,160,.07);
+}
+
+.career .icon{
+    font-size:32px;
+    margin-bottom:14px;
+}
+
+.career h3{
+    color:#ff9bc8;
+    margin-bottom:10px;
+}
+
+.career p{
+    color:#bbaab3;
+    line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+    margin-top:75px;
+    padding:28px;
+    text-align:center;
+    color:#88727d;
+    border-top:1px solid rgba(255,110,170,.12);
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .semesters,
+    .careers{
+        grid-template-columns:1fr;
+    }
+
+    .container{
+        width:92%;
+    }
+}
+
+@media(max-width:500px){
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero{
+        padding-top:60px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">📊 BBA HUB</div>
+    <a href="index.html" class="back">← Back</a>
+</header>
+
+<section class="hero">
+
+    <div class="badge">BUSINESS • MANAGEMENT • LEADERSHIP</div>
+
+    <h1>Bachelor of Business Administration</h1>
+
+    <p>Develop leadership, business strategy & management skills</p>
+
+</section>
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>3</h2>
+        <p>Years</p>
+    </div>
+
+    <div class="stat">
+        <h2>6</h2>
+        <p>Semesters</p>
+    </div>
+
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Core Subjects</p>
+    </div>
+
+    <div class="stat">
+        <h2>∞</h2>
+        <p>Career Paths</p>
+    </div>
+
+</section>
+
+<div class="container">
+
+<h2 class="section-title">📚 About BBA</h2>
+
+<div class="about">
+    Bachelor of Business Administration (BBA) is an undergraduate program
+    designed to develop knowledge of business, management, marketing, finance,
+    human resources, entrepreneurship and organizational leadership.
+    The program combines theoretical concepts with practical business skills.
+</div>
+
+<h2 class="section-title">🎓 Semester Journey</h2>
+
+<div class="semesters">
+
+<div class="card">
+<h3>Semester 1</h3>
+<ul>
+<li>Principles of Management</li>
+<li>Business Communication</li>
+<li>Financial Accounting</li>
+<li>Business Economics</li>
+<li>Business Mathematics</li>
+<li>Computer Applications</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Semester 2</h3>
+<ul>
+<li>Marketing Management</li>
+<li>Organizational Behaviour</li>
+<li>Business Statistics</li>
+<li>Human Resource Management</li>
+<li>Business Environment</li>
+<li>Cost Accounting</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Semester 3</h3>
+<ul>
+<li>Financial Management</li>
+<li>Operations Management</li>
+<li>Consumer Behaviour</li>
+<li>Business Research Methods</li>
+<li>Entrepreneurship</li>
+<li>Management Information System</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Semester 4</h3>
+<ul>
+<li>Strategic Management</li>
+<li>Production Management</li>
+<li>Sales Management</li>
+<li>Corporate Finance</li>
+<li>Business Law</li>
+<li>Project Management</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Semester 5</h3>
+<ul>
+<li>International Business</li>
+<li>Digital Marketing</li>
+<li>Business Analytics</li>
+<li>Leadership & Management</li>
+<li>Entrepreneurship Development</li>
+<li>Specialization Elective</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Semester 6</h3>
+<ul>
+<li>Major Project</li>
+<li>Industrial Training</li>
+<li>Strategic Business Planning</li>
+<li>Corporate Governance</li>
+<li>Professional Development</li>
+<li>Viva & Presentation</li>
+</ul>
+</div>
+
+</div>
+
+<h2 class="section-title">💼 Management Skills</h2>
+
+<div class="skills">
+
+<span class="skill">Leadership</span>
+<span class="skill">Marketing</span>
+<span class="skill">Finance</span>
+<span class="skill">Human Resources</span>
+<span class="skill">Business Analytics</span>
+<span class="skill">Communication</span>
+<span class="skill">Entrepreneurship</span>
+<span class="skill">Digital Marketing</span>
+<span class="skill">Project Management</span>
+<span class="skill">Strategic Planning</span>
+
+</div>
+
+<h2 class="section-title">🚀 Career Paths</h2>
+
+<div class="careers">
+
+<div class="career">
+<div class="icon">📈</div>
+<h3>Business Manager</h3>
+<p>Manage business operations and develop strategies for organizational growth.</p>
+</div>
+
+<div class="career">
+<div class="icon">📢</div>
+<h3>Marketing Manager</h3>
+<p>Plan marketing campaigns, branding strategies and customer growth.</p>
+</div>
+
+<div class="career">
+<div class="icon">💰</div>
+<h3>Finance Manager</h3>
+<p>Work with financial planning, budgeting and business analysis.</p>
+</div>
+
+<div class="career">
+<div class="icon">👥</div>
+<h3>HR Manager</h3>
+<p>Manage recruitment, employee development and organizational culture.</p>
+</div>
+
+<div class="career">
+<div class="icon">📊</div>
+<h3>Business Analyst</h3>
+<p>Analyze business information and support data-driven decisions.</p>
+</div>
+
+<div class="career">
+<div class="icon">🚀</div>
+<h3>Entrepreneur</h3>
+<p>Build, manage and grow your own business or startup.</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 BBA Department • Designed for College Portal
+</footer>
+
+</body>
+</html>

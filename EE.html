@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>EE HUB - Electrical Engineering</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ color:#fff;
+ background:
+ radial-gradient(circle at 15% 20%,#ffe60028,transparent 30%),
+ radial-gradient(circle at 85% 75%,#ff8c0028,transparent 30%),
+ #111008;
+}
+
+body:before,body:after{
+ content:"";
+ position:fixed;
+ width:250px;height:250px;
+ border-radius:50%;
+ background:#ffe60020;
+ filter:blur(70px);
+ z-index:-1;
+ animation:e 7s infinite alternate;
+}
+body:after{right:0;bottom:0;background:#ff980020}
+
+@keyframes e{to{transform:translate(-40px,-35px)}}
+
+header{
+ margin:20px;padding:18px 25px;
+ border:1px solid #ffffff20;
+ border-radius:20px;
+ background:#ffffff0b;
+ backdrop-filter:blur(20px);
+ display:flex;justify-content:space-between;align-items:center;
+}
+.logo{font-size:25px;font-weight:bold;color:#ffe600}
+.back{
+ color:white;text-decoration:none;
+ padding:10px 18px;border:1px solid #ffe60070;border-radius:12px;
+}
+
+.hero{text-align:center;padding:65px 20px}
+.badge{
+ color:#ffe600;border:1px solid #ffe60060;
+ background:#ffe60012;padding:8px 17px;border-radius:30px;
+}
+h1{
+ font-size:clamp(40px,7vw,75px);
+ margin:20px 0;
+ text-shadow:0 0 30px #ffe60070;
+}
+.hero p{color:#d4ceb2;font-size:18px}
+
+.container{max-width:1200px;margin:auto;padding:20px}
+
+.stats{
+ display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+}
+
+.card{
+ background:#ffffff0b;
+ border:1px solid #ffffff18;
+ border-radius:22px;
+ padding:25px;
+ backdrop-filter:blur(18px);
+ box-shadow:0 10px 40px #0006;
+ transition:.3s;
+}
+.card:hover{
+ transform:translateY(-7px);
+ border-color:#ffe60080;
+ box-shadow:0 0 30px #ffe60025;
+}
+
+.stat{text-align:center}
+.stat b{display:block;font-size:32px;color:#ffe600}
+.stat span{color:#c9c3a7}
+
+section{margin:55px 0}
+.title{font-size:32px;color:#ffe600;margin-bottom:20px}
+.about{line-height:1.8;color:#d7d1b8}
+
+.semesters{
+ display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
+}
+.sem h3{color:#ffe600}
+.sem li{line-height:1.8;color:#d7d1b8}
+
+.skills{display:flex;flex-wrap:wrap;gap:12px}
+.skill{
+ padding:11px 18px;border-radius:30px;
+ border:1px solid #ffe60045;background:#ffe60010;
+}
+
+.careers{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.career{text-align:center}
+.icon{font-size:42px}
+.career h3{color:#ffe600}
+
+footer{text-align:center;padding:40px;color:#928c70}
+
+@media(max-width:800px){
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .semesters,.careers{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">⚡ EE HUB</div>
+<a class="back" href="index.html">← Back</a>
+</header>
+
+<div class="hero">
+<div class="badge">ENGINEERING • POWER • TECHNOLOGY</div>
+<h1>Electrical Engineering</h1>
+<p>Power • Electronics • Control • Smart Energy</p>
+</div>
+
+<div class="container">
+
+<div class="stats">
+<div class="card stat"><b>4</b><span>Years</span></div>
+<div class="card stat"><b>8</b><span>Semesters</span></div>
+<div class="card stat"><b>60+</b><span>Core Subjects</span></div>
+<div class="card stat"><b>∞</b><span>Career Paths</span></div>
+</div>
+
+<section>
+<div class="title">⚡ About Electrical Engineering</div>
+<div class="card about">
+Electrical Engineering focuses on electricity, power systems, electrical
+machines, electronics, control systems and renewable energy. Electrical
+engineers design and maintain systems that generate, transmit, control and
+use electrical energy.
+</div>
+</section>
+
+<section>
+<div class="title">📚 8 Semester Journey</div>
+
+<div class="semesters">
+
+<div class="card sem">
+<h3>Semester 1</h3>
+<ul>
+<li>Engineering Mathematics I</li>
+<li>Engineering Physics</li>
+<li>Engineering Chemistry</li>
+<li>Basic Electrical Engineering</li>
+<li>Engineering Graphics</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 2</h3>
+<ul>
+<li>Engineering Mathematics II</li>
+<li>Engineering Mechanics</li>
+<li>Basic Electronics</li>
+<li>Programming Fundamentals</li>
+<li>Electrical Measurements</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 3</h3>
+<ul>
+<li>Electrical Circuit Theory</li>
+<li>Electromagnetic Fields</li>
+<li>Electrical Machines I</li>
+<li>Analog Electronics</li>
+<li>Signals & Systems</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 4</h3>
+<ul>
+<li>Electrical Machines II</li>
+<li>Power Systems I</li>
+<li>Digital Electronics</li>
+<li>Control Systems</li>
+<li>Electrical Measurements</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 5</h3>
+<ul>
+<li>Power Electronics</li>
+<li>Power Systems II</li>
+<li>Microprocessors</li>
+<li>Electrical Machine Design</li>
+<li>Switchgear & Protection</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 6</h3>
+<ul>
+<li>Power System Analysis</li>
+<li>High Voltage Engineering</li>
+<li>Digital Signal Processing</li>
+<li>Industrial Electronics</li>
+<li>Renewable Energy Systems</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 7</h3>
+<ul>
+<li>Smart Grid Technology</li>
+<li>Electrical Drives</li>
+<li>Power System Protection</li>
+<li>Advanced Control Systems</li>
+<li>Professional Elective</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 8</h3>
+<ul>
+<li>Major Project</li>
+<li>Industrial Training</li>
+<li>Power Quality</li>
+<li>Energy Management</li>
+<li>Professional Practice</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="title">🧠 Core Skills</div>
+<div class="skills">
+<span class="skill">MATLAB</span>
+<span class="skill">Simulink</span>
+<span class="skill">Circuit Design</span>
+<span class="skill">PLC</span>
+<span class="skill">Power Systems</span>
+<span class="skill">Control Systems</span>
+<span class="skill">Power Electronics</span>
+<span class="skill">Renewable Energy</span>
+</div>
+</section>
+
+<section>
+<div class="title">🚀 Career Paths</div>
+<div class="careers">
+
+<div class="card career"><div class="icon">⚡</div><h3>Power Engineer</h3><p>Work with generation and power networks.</p></div>
+<div class="card career"><div class="icon">🔌</div><h3>Electrical Design</h3><p>Design electrical systems and installations.</p></div>
+<div class="card career"><div class="icon">🤖</div><h3>Control Engineer</h3><p>Develop automation and control systems.</p></div>
+<div class="card career"><div class="icon">🏭</div><h3>Industrial Engineer</h3><p>Work with industrial electrical systems.</p></div>
+<div class="card career"><div class="icon">☀️</div><h3>Renewable Energy</h3><p>Build modern clean-energy systems.</p></div>
+<div class="card career"><div class="icon">💻</div><h3>Embedded Engineer</h3><p>Develop intelligent electronic systems.</p></div>
+
+</div>
+</section>
+
+</div>
+
+<footer>
+EE HUB • Electrical Engineering Knowledge Portal
+</footer>
+
+</body>
+</html>

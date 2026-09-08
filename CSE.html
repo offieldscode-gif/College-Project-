@@ -1,0 +1,1135 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CSE | Computer Science & Engineering</title><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:#fff;
+    background:
+        radial-gradient(circle at 10% 20%,#172554 0,transparent 28%),
+        radial-gradient(circle at 90% 10%,#3b0764 0,transparent 25%),
+        radial-gradient(circle at 50% 100%,#063b4c 0,transparent 30%),
+        #050816;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND EFFECT ================= */
+
+body:before,
+body:after{
+    content:"";
+    position:fixed;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.25;
+    z-index:-1;
+    animation:float 8s ease-in-out infinite alternate;
+}
+
+body:before{
+    background:#00e5ff;
+    top:15%;
+    left:-100px;
+}
+
+body:after{
+    background:#8b5cf6;
+    right:-100px;
+    bottom:10%;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    from{transform:translateY(0) scale(1);}
+    to{transform:translateY(80px) scale(1.15);}
+}
+
+/* ================= HEADER ================= */
+
+header{
+    min-height:390px;
+    padding:30px 8%;
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid #ffffff18;
+    background:linear-gradient(
+        135deg,
+        #071124aa,
+        #17103aaa,
+        #062d3aaa
+    );
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+}
+
+header:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    right:-150px;
+    top:-220px;
+    border-radius:50%;
+    border:1px solid #00e5ff25;
+    box-shadow:
+        0 0 80px #00e5ff15,
+        inset 0 0 80px #8b5cf615;
+}
+
+header:after{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:1px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #00e5ff,
+        transparent
+    );
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    opacity:.5;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+    color:#67e8f9;
+    text-shadow:0 0 18px #00e5ff;
+}
+
+.back{
+    text-decoration:none;
+    color:#e0f2fe;
+    padding:11px 20px;
+    border:1px solid #ffffff25;
+    border-radius:30px;
+    background:#ffffff0c;
+    backdrop-filter:blur(12px);
+    transition:.3s;
+}
+
+.back:hover{
+    color:#00e5ff;
+    border-color:#00e5ff;
+    box-shadow:0 0 20px #00e5ff30;
+    transform:translateY(-2px);
+}
+
+.hero{
+    margin-top:70px;
+    position:relative;
+    z-index:2;
+}
+
+.hero span{
+    color:#22d3ee;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+.hero h1{
+    margin:14px 0;
+    font-size:52px;
+    line-height:1.1;
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #67e8f9,
+        #a78bfa
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    max-width:760px;
+    color:#b8c5d8;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* ================= MAIN ================= */
+
+.container{
+    width:84%;
+    max-width:1400px;
+    margin:45px auto;
+}
+
+/* ================= GLASS ================= */
+
+.glass{
+    background:linear-gradient(
+        135deg,
+        #ffffff0d,
+        #ffffff04
+    );
+    border:1px solid #ffffff16;
+    box-shadow:
+        0 20px 60px #00000030,
+        inset 0 1px #ffffff12;
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat{
+    padding:28px 20px;
+    border-radius:22px;
+    text-align:center;
+    background:#ffffff08;
+    border:1px solid #ffffff15;
+    backdrop-filter:blur(18px);
+    transition:.35s;
+}
+
+.stat:hover{
+    transform:translateY(-8px);
+    border-color:#00e5ff70;
+    box-shadow:0 15px 45px #00e5ff12;
+}
+
+.stat h2{
+    font-size:34px;
+    color:#67e8f9;
+    text-shadow:0 0 18px #00e5ff60;
+}
+
+.stat p{
+    margin-top:8px;
+    color:#94a3b8;
+}
+
+/* ================= TITLES ================= */
+
+.section-title{
+    margin:65px 0 24px;
+}
+
+.section-title h2{
+    font-size:31px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.section-title p{
+    margin-top:8px;
+    color:#8190a5;
+}
+
+/* ================= ABOUT ================= */
+
+.about-card{
+    padding:30px;
+    border-radius:22px;
+    background:#ffffff08;
+    border:1px solid #ffffff15;
+    backdrop-filter:blur(18px);
+    position:relative;
+    overflow:hidden;
+}
+
+.about-card:before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:#00e5ff;
+    filter:blur(100px);
+    opacity:.08;
+    right:-50px;
+    top:-70px;
+}
+
+.about-card h3{
+    color:#67e8f9;
+    margin-bottom:12px;
+}
+
+.about-card p{
+    color:#aebbd0;
+    line-height:1.8;
+}
+
+/* ================= SEMESTERS ================= */
+
+.semesters{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.sem{
+    padding:24px;
+    min-height:250px;
+    border-radius:22px;
+    background:
+        linear-gradient(145deg,#ffffff0d,#ffffff03);
+    border:1px solid #ffffff14;
+    backdrop-filter:blur(16px);
+    position:relative;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.sem:before{
+    content:"";
+    position:absolute;
+    height:2px;
+    width:70px;
+    left:24px;
+    top:0;
+    background:#00e5ff;
+    box-shadow:0 0 15px #00e5ff;
+}
+
+.sem:hover{
+    transform:translateY(-8px);
+    border-color:#8b5cf670;
+    box-shadow:0 20px 45px #8b5cf615;
+}
+
+.sem h3{
+    color:#a78bfa;
+    margin:8px 0 17px;
+    letter-spacing:1px;
+}
+
+.sem ul{
+    list-style:none;
+}
+
+.sem li{
+    color:#cbd5e1;
+    padding:9px 0;
+    border-bottom:1px solid #ffffff0b;
+    font-size:14px;
+}
+
+.sem li:before{
+    content:"›";
+    color:#22d3ee;
+    margin-right:8px;
+    font-weight:bold;
+}
+
+/* ================= SKILLS ================= */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
+}
+
+.skill{
+    padding:12px 19px;
+    border-radius:30px;
+    background:#ffffff08;
+    border:1px solid #ffffff16;
+    color:#c8e8f2;
+    backdrop-filter:blur(12px);
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-4px);
+    border-color:#00e5ff;
+    color:#67e8f9;
+    box-shadow:0 0 22px #00e5ff18;
+}
+
+/* ================= CAREER ================= */
+
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.career-card{
+    padding:28px;
+    border-radius:24px;
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff0e,
+            #ffffff03
+        );
+    border:1px solid #ffffff16;
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.career-card:before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:#00e5ff;
+    filter:blur(80px);
+    opacity:0;
+    right:-70px;
+    bottom:-70px;
+    transition:.4s;
+}
+
+.career-card:hover:before{
+    opacity:.15;
+}
+
+.career-card:hover{
+    transform:translateY(-10px);
+    border-color:#00e5ff70;
+    box-shadow:
+        0 20px 55px #00e5ff12,
+        inset 0 0 30px #ffffff05;
+}
+
+.career-icon{
+    font-size:44px;
+    margin-bottom:16px;
+    filter:drop-shadow(0 0 12px #00e5ff30);
+}
+
+.career-card h3{
+    font-size:21px;
+    margin-bottom:9px;
+}
+
+.career-card p{
+    color:#8fa0b6;
+    margin-bottom:20px;
+}
+
+.career-card span{
+    color:#22d3ee;
+    font-weight:bold;
+}
+
+/* ================= DETAILS ================= */
+
+.career-details{
+    display:none;
+    margin-top:30px;
+    padding:38px;
+    border-radius:26px;
+    background:
+        linear-gradient(
+            135deg,
+            #0d1830dd,
+            #241348dd
+        );
+    border:1px solid #00e5ff45;
+    box-shadow:
+        0 20px 70px #00000050,
+        0 0 50px #00e5ff08;
+    backdrop-filter:blur(25px);
+    animation:appear .45s ease;
+    position:relative;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.close-btn{
+    position:absolute;
+    right:20px;
+    top:18px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:1px solid #ffffff18;
+    background:#ffffff0d;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+.close-btn:hover{
+    background:#ef4444;
+    border-color:#ef4444;
+    box-shadow:0 0 20px #ef444455;
+}
+
+.detail-title{
+    font-size:32px;
+    color:#67e8f9;
+    margin-bottom:12px;
+    text-shadow:0 0 20px #00e5ff30;
+}
+
+.detail-description{
+    color:#b7c4d7;
+    line-height:1.8;
+    max-width:900px;
+}
+
+.detail-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:28px;
+}
+
+.detail-box{
+    padding:22px;
+    border-radius:18px;
+    background:#ffffff08;
+    border:1px solid #ffffff12;
+}
+
+.detail-box h4{
+    color:#a78bfa;
+    margin-bottom:12px;
+}
+
+.detail-box p,
+.detail-box li{
+    color:#bdc9d9;
+    line-height:1.8;
+}
+
+.detail-box ul{
+    padding-left:18px;
+}
+
+.roadmap{
+    margin-top:28px;
+}
+
+.roadmap h4{
+    margin-bottom:10px;
+}
+
+.roadmap span{
+    display:inline-block;
+    padding:10px 17px;
+    margin:5px;
+    border-radius:22px;
+    background:#00e5ff0c;
+    color:#67e8f9;
+    border:1px solid #00e5ff25;
+    transition:.3s;
+}
+
+.roadmap span:hover{
+    background:#00e5ff15;
+    border-color:#00e5ff;
+    box-shadow:0 0 18px #00e5ff15;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    margin-top:75px;
+    padding:35px;
+    text-align:center;
+    background:#02040b99;
+    border-top:1px solid #ffffff10;
+    color:#64748b;
+    backdrop-filter:blur(15px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1050px){
+
+    .semesters{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .career-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .detail-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:800px){
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        min-height:430px;
+        padding:25px 6%;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    .hero{
+        margin-top:55px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .stats,
+    .semesters,
+    .career-grid{
+        grid-template-columns:1fr;
+    }
+
+    .career-details{
+        padding:28px 18px;
+    }
+
+    .detail-title{
+        font-size:25px;
+        padding-right:35px;
+    }
+}
+</style></head><body><header><div class="nav">
+    <div class="logo">⚡ CSE HUB</div>
+    <a href="index.html" class="back">← Back</a>
+</div><div class="hero">
+    <span>ENGINEERING PROGRAM • 01</span><h1>
+    Computer Science<br>
+    & Engineering
+</h1>
+
+<p>
+    Explore programming, artificial intelligence, software development,
+    databases, cybersecurity, cloud computing and the technologies
+    shaping the digital future.
+</p>
+
+</div></header><main class="container"><!-- STATS --><div class="stats"><div class="stat">
+<h2>4</h2>
+<p>Years</p>
+</div><div class="stat">
+<h2>8</h2>
+<p>Semesters</p>
+</div><div class="stat">
+<h2>60+</h2>
+<p>Core Subjects</p>
+</div><div class="stat">
+<h2>∞</h2>
+<p>Career Opportunities</p>
+</div></div><!-- ABOUT --><div class="section-title">
+<h2>🚀 About CSE</h2>
+<p>Build the technology that powers tomorrow.</p>
+</div><div class="about-card">
+<h3>What will you learn?</h3><p>
+CSE covers programming, data structures, algorithms, operating systems,
+computer networks, databases, web development, artificial intelligence,
+machine learning, cybersecurity, cloud computing and software engineering.
+The program develops both technical knowledge and problem-solving skills.
+</p></div><!-- SEMESTERS --><div class="section-title">
+<h2>📚 8 Semester Journey</h2>
+<p>Your complete academic roadmap from foundation to advanced computing.</p>
+</div><div class="semesters"><div class="sem">
+<h3>SEMESTER 01</h3>
+<ul>
+<li>Engineering Mathematics-I</li>
+<li>Engineering Physics</li>
+<li>Engineering Chemistry</li>
+<li>Programming for Problem Solving</li>
+<li>Basic Electrical Engineering</li>
+</ul>
+</div><div class="sem">
+<h3>SEMESTER 02</h3>
+<ul>
+<li>Engineering Mathematics-II</li>
+<li>Engineering Graphics</li>
+<li>Data Structures</li>
+<li>Digital Electronics</li>
+<li>Web Technology Basics</li>
+</ul>
+</div><div class="sem">
+<h3>SEMESTER 03</h3>
+<ul>
+<li>Discrete Mathematics</li>
+<li>Object Oriented Programming</li>
+<li>Database Management System</li>
+<li>Computer Organization</li>
+<li>Operating Systems</li>
+</ul>
+</div><div class="sem">
+<h3>SEMESTER 04</h3>
+<ul>
+<li>Computer Networks</li>
+<li>Design & Analysis of Algorithms</li>
+<li>Software Engineering</li>
+<li>Theory of Computation</li>
+<li>Web Development</li>
+</ul>
+</div><div class="sem">
+<h3>SEMESTER 05</h3>
+<ul>
+<li>Artificial Intelligence</li>
+<li>Machine Learning</li>
+<li>Compiler Design</li>
+<li>Cloud Computing</li>
+<li>Cyber Security</li>
+</ul>
+</div><div class="sem">
+<h3>SEMESTER 06</h3>
+<ul>
+<li>Advanced DBMS</li>
+<li>Computer Graphics</li>
+<li>Mobile Application Development</li>
+<li>Data Analytics</li>
+<li>Elective Subject</li>
+</ul>
+</div><div class="sem">
+<h3>SEMESTER 07</h3>
+<ul>
+<li>Deep Learning</li>
+<li>Big Data</li>
+<li>Internet of Things</li>
+<li>Professional Elective</li>
+<li>Project Work-I</li>
+</ul>
+</div><div class="sem">
+<h3>SEMESTER 08</h3>
+<ul>
+<li>Advanced Computing</li>
+<li>Entrepreneurship</li>
+<li>Major Project</li>
+<li>Seminar</li>
+<li>Project Presentation</li>
+</ul>
+</div></div><!-- SKILLS --><div class="section-title">
+<h2>💻 Core Skills</h2>
+<p>Technologies and skills every CSE student can explore.</p>
+</div><div class="skills"><div class="skill">C / C++</div>
+<div class="skill">Python</div>
+<div class="skill">Java</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">SQL</div>
+<div class="skill">Data Structures</div>
+<div class="skill">AI & ML</div>
+<div class="skill">Cyber Security</div>
+<div class="skill">Cloud Computing</div>
+<div class="skill">Git & GitHub</div></div><!-- CAREER PATHS --><div class="section-title">
+<h2>🎯 Career Paths</h2>
+<p>Select a career path to explore its skills, technologies and roadmap.</p>
+</div><div class="career-grid"><div class="career-card" onclick="showCareer('software')">
+<div class="career-icon">👨‍💻</div>
+<h3>Software Developer</h3>
+<p>Build apps, websites & software.</p>
+<span>Explore →</span>
+</div><div class="career-card" onclick="showCareer('aiml')">
+<div class="career-icon">🤖</div>
+<h3>AI / ML Engineer</h3>
+<p>Build intelligent systems.</p>
+<span>Explore →</span>
+</div><div class="career-card" onclick="showCareer('cyber')">
+<div class="career-icon">🔐</div>
+<h3>Cyber Security</h3>
+<p>Protect digital systems.</p>
+<span>Explore →</span>
+</div><div class="career-card" onclick="showCareer('cloud')">
+<div class="career-icon">☁️</div>
+<h3>Cloud Engineer</h3>
+<p>Work with cloud infrastructure.</p>
+<span>Explore →</span>
+</div><div class="career-card" onclick="showCareer('data')">
+<div class="career-icon">📊</div>
+<h3>Data Scientist</h3>
+<p>Turn data into useful insights.</p>
+<span>Explore →</span>
+</div><div class="career-card" onclick="showCareer('web')">
+<div class="career-icon">🌐</div>
+<h3>Web Developer</h3>
+<p>Create modern web applications.</p>
+<span>Explore →</span>
+</div></div><!-- CAREER DETAILS --><div id="careerDetails" class="career-details"><button onclick="closeCareer()" class="close-btn">✕</button>
+
+<div id="careerContent"></div></div></main><footer>
+⚡ CSE HUB &nbsp; | &nbsp; Computer Science & Engineering
+<br><br>
+Learn • Build • Innovate • Grow
+</footer><script>
+
+function showCareer(career){
+
+let content="";
+
+if(career==="software"){
+
+content=`
+<h2 class="detail-title">👨‍💻 Software Developer</h2>
+
+<p class="detail-description">
+Software developers design, build, test and maintain applications
+and software systems used by people and organizations.
+</p>
+
+<div class="detail-grid">
+
+<div class="detail-box">
+<h4>🛠 Skills Required</h4>
+<ul>
+<li>Programming</li>
+<li>Data Structures</li>
+<li>Algorithms</li>
+<li>Problem Solving</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h4>💻 Technologies</h4>
+<p>C++ • Java • Python • JavaScript • Git</p>
+</div>
+
+<div class="detail-box">
+<h4>🎯 Job Roles</h4>
+<p>
+Software Engineer<br>
+Backend Developer<br>
+Application Developer
+</p>
+</div>
+
+</div>
+
+<div class="roadmap">
+<h4>🚀 Roadmap</h4>
+<span>Programming</span>
+<span>DSA</span>
+<span>Projects</span>
+<span>Git</span>
+<span>Internship</span>
+</div>
+`;
+}
+
+
+else if(career==="aiml"){
+
+content=`
+<h2 class="detail-title">🤖 AI / ML Engineer</h2>
+
+<p class="detail-description">
+AI and Machine Learning engineers develop systems that can learn
+from data and perform intelligent tasks.
+</p>
+
+<div class="detail-grid">
+
+<div class="detail-box">
+<h4>🧠 Skills</h4>
+<ul>
+<li>Python</li>
+<li>Statistics</li>
+<li>Machine Learning</li>
+<li>Deep Learning</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h4>⚙️ Technologies</h4>
+<p>Python • NumPy • Pandas • TensorFlow • PyTorch</p>
+</div>
+
+<div class="detail-box">
+<h4>🎯 Job Roles</h4>
+<p>
+ML Engineer<br>
+AI Engineer<br>
+Data Scientist
+</p>
+</div>
+
+</div>
+
+<div class="roadmap">
+<h4>🚀 Roadmap</h4>
+<span>Python</span>
+<span>Maths</span>
+<span>ML</span>
+<span>Deep Learning</span>
+<span>Projects</span>
+</div>
+`;
+}
+
+
+else if(career==="cyber"){
+
+content=`
+<h2 class="detail-title">🔐 Cyber Security</h2>
+
+<p class="detail-description">
+Cyber security professionals help protect computers, networks,
+applications and information from unauthorized access and attacks.
+</p>
+
+<div class="detail-grid">
+
+<div class="detail-box">
+<h4>🛡 Skills</h4>
+<ul>
+<li>Networking</li>
+<li>Linux</li>
+<li>Security Fundamentals</li>
+<li>Problem Solving</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h4>💻 Technologies</h4>
+<p>Linux • Python • Networking • Security Tools</p>
+</div>
+
+<div class="detail-box">
+<h4>🎯 Job Roles</h4>
+<p>
+Security Analyst<br>
+SOC Analyst<br>
+Security Engineer
+</p>
+</div>
+
+</div>
+
+<div class="roadmap">
+<h4>🚀 Roadmap</h4>
+<span>Networking</span>
+<span>Linux</span>
+<span>Security</span>
+<span>Labs</span>
+<span>Certifications</span>
+</div>
+`;
+}
+
+
+else if(career==="cloud"){
+
+content=`
+<h2 class="detail-title">☁️ Cloud Engineer</h2>
+
+<p class="detail-description">
+Cloud engineers design, deploy and maintain applications and
+infrastructure using cloud computing platforms.
+</p>
+
+<div class="detail-grid">
+
+<div class="detail-box">
+<h4>🛠 Skills</h4>
+<ul>
+<li>Linux</li>
+<li>Networking</li>
+<li>Cloud Fundamentals</li>
+<li>DevOps</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h4>☁️ Platforms</h4>
+<p>AWS • Azure • Google Cloud • Docker</p>
+</div>
+
+<div class="detail-box">
+<h4>🎯 Job Roles</h4>
+<p>
+Cloud Engineer<br>
+DevOps Engineer<br>
+Cloud Architect
+</p>
+</div>
+
+</div>
+
+<div class="roadmap">
+<h4>🚀 Roadmap</h4>
+<span>Linux</span>
+<span>Networking</span>
+<span>Cloud</span>
+<span>Docker</span>
+<span>DevOps</span>
+</div>
+`;
+}
+
+
+else if(career==="data"){
+
+content=`
+<h2 class="detail-title">📊 Data Scientist</h2>
+
+<p class="detail-description">
+Data scientists analyze datasets and use statistics,
+programming and machine learning to find useful insights.
+</p>
+
+<div class="detail-grid">
+
+<div class="detail-box">
+<h4>📚 Skills</h4>
+<ul>
+<li>Python</li>
+<li>Statistics</li>
+<li>Data Analysis</li>
+<li>Machine Learning</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h4>📊 Technologies</h4>
+<p>Python • SQL • Pandas • NumPy • Power BI</p>
+</div>
+
+<div class="detail-box">
+<h4>🎯 Job Roles</h4>
+<p>
+Data Scientist<br>
+Data Analyst<br>
+ML Analyst
+</p>
+</div>
+
+</div>
+
+<div class="roadmap">
+<h4>🚀 Roadmap</h4>
+<span>Python</span>
+<span>SQL</span>
+<span>Statistics</span>
+<span>Data Analysis</span>
+<span>ML</span>
+</div>
+`;
+}
+
+
+else if(career==="web"){
+
+content=`
+<h2 class="detail-title">🌐 Web Developer</h2>
+
+<p class="detail-description">
+Web developers create responsive and interactive websites
+and web applications for users across different devices.
+</p>
+
+<div class="detail-grid">
+
+<div class="detail-box">
+<h4>🎨 Frontend</h4>
+<p>HTML • CSS • JavaScript • React</p>
+</div>
+
+<div class="detail-box">
+<h4>⚙️ Backend</h4>
+<p>Node.js • Python • Java • SQL</p>
+</div>
+
+<div class="detail-box">
+<h4>🎯 Job Roles</h4>
+<p>
+Frontend Developer<br>
+Backend Developer<br>
+Full Stack Developer
+</p>
+</div>
+
+</div>
+
+<div class="roadmap">
+<h4>🚀 Roadmap</h4>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Frontend</span>
+<span>Backend</span>
+<span>Projects</span>
+</div>
+`;
+}
+
+
+document.getElementById("careerContent").innerHTML=content;
+
+const details=document.getElementById("careerDetails");
+
+details.style.display="block";
+
+setTimeout(()=>{
+details.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+},50);
+
+}
+
+
+function closeCareer(){
+
+document.getElementById("careerDetails").style.display="none";
+
+}
+
+</script></body>
+</html>

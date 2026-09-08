@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI & ML HUB</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Arial,sans-serif;color:#fff;
+ background:
+ radial-gradient(circle at 15% 20%,#7c4dff35,transparent 30%),
+ radial-gradient(circle at 85% 75%,#00e5ff30,transparent 30%),#080914;
+}
+body:before,body:after{
+ content:"";position:fixed;width:280px;height:280px;border-radius:50%;
+ background:#7c4dff25;filter:blur(80px);z-index:-1;
+ animation:f 8s infinite alternate;
+}
+body:after{right:0;bottom:0;background:#00e5ff20}
+@keyframes f{to{transform:translate(40px,-40px)}}
+
+header{
+ margin:20px;padding:18px 25px;border:1px solid #ffffff20;
+ border-radius:20px;background:#ffffff0b;backdrop-filter:blur(20px);
+ display:flex;justify-content:space-between;align-items:center;
+}
+.logo{font-size:25px;font-weight:bold;color:#a98cff}
+.back{
+ color:white;text-decoration:none;padding:10px 18px;
+ border:1px solid #a98cff70;border-radius:12px
+}
+.hero{text-align:center;padding:65px 20px}
+.badge{
+ color:#b99cff;border:1px solid #9b75ff70;background:#9b75ff12;
+ padding:8px 18px;border-radius:30px
+}
+h1{
+ font-size:clamp(40px,7vw,75px);margin:20px 0;
+ text-shadow:0 0 30px #8c5cff90
+}
+.hero p{color:#c4c5dc;font-size:18px}
+.container{max-width:1200px;margin:auto;padding:20px}
+.stats,.semesters,.careers{display:grid;gap:20px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.card{
+ background:#ffffff0b;border:1px solid #ffffff18;border-radius:22px;
+ padding:25px;backdrop-filter:blur(18px);box-shadow:0 10px 40px #0006;
+ transition:.3s
+}
+.card:hover{
+ transform:translateY(-7px);border-color:#a98cff80;
+ box-shadow:0 0 35px #805cff30
+}
+.stat{text-align:center}.stat b{display:block;font-size:32px;color:#b394ff}
+.stat span{color:#aeb1c7}
+section{margin:55px 0}
+.title{font-size:32px;color:#a98cff;margin-bottom:20px}
+.about{line-height:1.8;color:#d0d1e2}
+.semesters{grid-template-columns:repeat(2,1fr)}
+.sem h3{color:#b99cff}.sem li{line-height:1.8;color:#d0d1e2}
+.skills{display:flex;flex-wrap:wrap;gap:12px}
+.skill{
+ padding:11px 18px;border-radius:30px;
+ border:1px solid #9b75ff45;background:#9b75ff10
+}
+.careers{grid-template-columns:repeat(3,1fr)}
+.career{text-align:center}.icon{font-size:42px}
+.career h3{color:#b99cff}
+footer{text-align:center;padding:40px;color:#777b99}
+@media(max-width:800px){
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .semesters,.careers{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="logo">🤖 AI & ML HUB</div>
+<a class="back" href="index.html">← Back</a>
+</header>
+
+<div class="hero">
+<div class="badge">INTELLIGENCE • DATA • AUTOMATION</div>
+<h1>Artificial Intelligence & Machine Learning</h1>
+<p>Think • Learn • Predict • Automate</p>
+</div>
+
+<div class="container">
+
+<div class="stats">
+<div class="card stat"><b>4</b><span>Years</span></div>
+<div class="card stat"><b>8</b><span>Semesters</span></div>
+<div class="card stat"><b>60+</b><span>Core Subjects</span></div>
+<div class="card stat"><b>∞</b><span>Career Paths</span></div>
+</div>
+
+<section>
+<div class="title">🧠 About AI & ML</div>
+<div class="card about">
+Artificial Intelligence and Machine Learning focuses on creating intelligent
+systems that can learn from data, recognize patterns, make predictions and
+solve complex problems. The field combines programming, mathematics,
+statistics, data science, neural networks and automation.
+</div>
+</section>
+
+<section>
+<div class="title">📚 8 Semester Journey</div>
+<div class="semesters">
+
+<div class="card sem"><h3>Semester 1</h3><ul>
+<li>Engineering Mathematics I</li><li>Programming Fundamentals</li>
+<li>Engineering Physics</li><li>Communication Skills</li><li>Computer Fundamentals</li>
+</ul></div>
+
+<div class="card sem"><h3>Semester 2</h3><ul>
+<li>Engineering Mathematics II</li><li>Data Structures</li>
+<li>Object Oriented Programming</li><li>Database Fundamentals</li><li>Digital Electronics</li>
+</ul></div>
+
+<div class="card sem"><h3>Semester 3</h3><ul>
+<li>Probability & Statistics</li><li>Python Programming</li>
+<li>Artificial Intelligence</li><li>Operating Systems</li><li>Computer Networks</li>
+</ul></div>
+
+<div class="card sem"><h3>Semester 4</h3><ul>
+<li>Machine Learning</li><li>Data Mining</li>
+<li>Advanced Python</li><li>Database Management</li><li>Web Technologies</li>
+</ul></div>
+
+<div class="card sem"><h3>Semester 5</h3><ul>
+<li>Deep Learning</li><li>Natural Language Processing</li>
+<li>Computer Vision</li><li>Big Data Analytics</li><li>Cloud Computing</li>
+</ul></div>
+
+<div class="card sem"><h3>Semester 6</h3><ul>
+<li>Neural Networks</li><li>Reinforcement Learning</li>
+<li>Data Science</li><li>AI Ethics</li><li>Model Deployment</li>
+</ul></div>
+
+<div class="card sem"><h3>Semester 7</h3><ul>
+<li>Generative AI</li><li>Advanced Deep Learning</li>
+<li>MLOps</li><li>AI Applications</li><li>Professional Elective</li>
+</ul></div>
+
+<div class="card sem"><h3>Semester 8</h3><ul>
+<li>Major AI Project</li><li>Industrial Training</li>
+<li>Research Methodology</li><li>AI Product Development</li><li>Professional Practice</li>
+</ul></div>
+
+</div>
+</section>
+
+<section>
+<div class="title">🛠️ Core Skills</div>
+<div class="skills">
+<span class="skill">Python</span><span class="skill">TensorFlow</span>
+<span class="skill">PyTorch</span><span class="skill">Machine Learning</span>
+<span class="skill">Deep Learning</span><span class="skill">NLP</span>
+<span class="skill">Computer Vision</span><span class="skill">Data Science</span>
+</div>
+</section>
+
+<section>
+<div class="title">🚀 Career Paths</div>
+<div class="careers">
+<div class="card career"><div class="icon">🤖</div><h3>AI Engineer</h3><p>Build intelligent applications.</p></div>
+<div class="card career"><div class="icon">🧠</div><h3>ML Engineer</h3><p>Develop machine learning systems.</p></div>
+<div class="card career"><div class="icon">📊</div><h3>Data Scientist</h3><p>Extract insights from data.</p></div>
+<div class="card career"><div class="icon">👁️</div><h3>Computer Vision</h3><p>Build image and video intelligence.</p></div>
+<div class="card career"><div class="icon">💬</div><h3>NLP Engineer</h3><p>Develop language-based AI systems.</p></div>
+<div class="card career"><div class="icon">☁️</div><h3>MLOps Engineer</h3><p>Deploy and manage ML systems.</p></div>
+</div>
+</section>
+</div>
+
+<footer>AI & ML HUB • Intelligent Technology Portal</footer>
+</body>
+</html>

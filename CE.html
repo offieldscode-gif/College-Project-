@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CE HUB - Civil Engineering</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ color:#fff;
+ background:
+ radial-gradient(circle at 15% 20%,#00aaff35,transparent 30%),
+ radial-gradient(circle at 85% 70%,#00ff8830,transparent 30%),
+ #071014;
+}
+
+body:before,body:after{
+ content:"";
+ position:fixed;
+ width:250px;height:250px;
+ border-radius:50%;
+ background:#00eaff22;
+ filter:blur(70px);
+ animation:float 7s infinite alternate;
+ z-index:-1;
+}
+body:after{right:0;bottom:0;background:#00ff8822;animation-delay:2s}
+
+@keyframes float{
+ from{transform:translate(0,0)}
+ to{transform:translate(50px,-30px)}
+}
+
+header{
+ margin:20px;
+ padding:18px 25px;
+ border:1px solid #ffffff25;
+ border-radius:20px;
+ background:#ffffff0b;
+ backdrop-filter:blur(18px);
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ box-shadow:0 0 30px #00d9ff18;
+}
+
+.logo{font-size:25px;font-weight:bold;color:#00eaff}
+.back{
+ color:white;text-decoration:none;
+ padding:10px 18px;
+ border:1px solid #00eaff70;
+ border-radius:12px;
+}
+
+.hero{text-align:center;padding:65px 20px 45px}
+.badge{
+ display:inline-block;
+ padding:8px 16px;
+ border-radius:30px;
+ background:#00eaff15;
+ border:1px solid #00eaff55;
+ color:#00eaff;
+}
+h1{
+ font-size:clamp(38px,7vw,75px);
+ margin:20px 0 10px;
+ text-shadow:0 0 25px #00eaff80;
+}
+.hero p{color:#b7c9ce;font-size:18px}
+
+.container{max-width:1200px;margin:auto;padding:20px}
+
+.stats{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:18px;
+}
+.card{
+ background:#ffffff0b;
+ border:1px solid #ffffff18;
+ border-radius:22px;
+ padding:25px;
+ backdrop-filter:blur(18px);
+ box-shadow:0 10px 40px #0005;
+ transition:.3s;
+}
+.card:hover{
+ transform:translateY(-7px);
+ border-color:#00eaff80;
+ box-shadow:0 0 30px #00eaff25;
+}
+.stat{text-align:center}
+.stat b{font-size:30px;color:#00eaff;display:block}
+.stat span{color:#aabdc2}
+
+section{margin:55px 0}
+.title{
+ font-size:32px;
+ margin-bottom:20px;
+ color:#00eaff;
+}
+
+.about{line-height:1.8;color:#c9d5d8}
+
+.semesters{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:20px;
+}
+.sem h3{color:#00ff99}
+.sem ul{line-height:1.9;color:#c9d5d8}
+
+.skills{
+ display:flex;flex-wrap:wrap;gap:12px;
+}
+.skill{
+ padding:11px 17px;
+ border-radius:30px;
+ background:#00eaff10;
+ border:1px solid #00eaff35;
+ color:#dffcff;
+}
+
+.careers{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+}
+.career{
+ cursor:pointer;
+ text-align:center;
+}
+.career .icon{font-size:42px}
+.career h3{color:#00eaff}
+
+footer{
+ text-align:center;
+ padding:40px;
+ color:#7f979d;
+}
+
+@media(max-width:800px){
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .semesters,.careers{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🏗️ CE HUB</div>
+<a class="back" href="index.html">← Back</a>
+</header>
+
+<div class="hero">
+<div class="badge">ENGINEERING • BUILT ENVIRONMENT</div>
+<h1>Civil Engineering</h1>
+<p>Design • Construct • Manage • Build the Future</p>
+</div>
+
+<div class="container">
+
+<div class="stats">
+<div class="card stat"><b>4</b><span>Years</span></div>
+<div class="card stat"><b>8</b><span>Semesters</span></div>
+<div class="card stat"><b>60+</b><span>Core Subjects</span></div>
+<div class="card stat"><b>∞</b><span>Career Paths</span></div>
+</div>
+
+<section>
+<div class="title">🏛️ About Civil Engineering</div>
+<div class="card about">
+Civil Engineering deals with the planning, design, construction and maintenance
+of infrastructure such as buildings, bridges, highways, dams, water systems,
+transportation networks and smart cities.
+<br><br>
+It combines engineering science, mathematics, materials, structures and
+project management to create safe and sustainable infrastructure.
+</div>
+</section>
+
+<section>
+<div class="title">📚 8 Semester Journey</div>
+
+<div class="semesters">
+
+<div class="card sem">
+<h3>Semester 1</h3>
+<ul>
+<li>Engineering Mathematics I</li>
+<li>Engineering Physics</li>
+<li>Engineering Chemistry</li>
+<li>Basic Electrical Engineering</li>
+<li>Engineering Graphics</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 2</h3>
+<ul>
+<li>Engineering Mathematics II</li>
+<li>Engineering Mechanics</li>
+<li>Basic Electronics</li>
+<li>Programming for Problem Solving</li>
+<li>Building Materials</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 3</h3>
+<ul>
+<li>Strength of Materials</li>
+<li>Fluid Mechanics</li>
+<li>Surveying</li>
+<li>Building Construction</li>
+<li>Structural Analysis</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 4</h3>
+<ul>
+<li>Concrete Technology</li>
+<li>Geotechnical Engineering</li>
+<li>Transportation Engineering</li>
+<li>Hydraulics</li>
+<li>Engineering Geology</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 5</h3>
+<ul>
+<li>Structural Design</li>
+<li>Environmental Engineering</li>
+<li>Foundation Engineering</li>
+<li>Water Resources Engineering</li>
+<li>Construction Management</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 6</h3>
+<ul>
+<li>Design of RCC Structures</li>
+<li>Highway Engineering</li>
+<li>Wastewater Engineering</li>
+<li>Estimation & Costing</li>
+<li>Advanced Surveying</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 7</h3>
+<ul>
+<li>Steel Structure Design</li>
+<li>Prestressed Concrete</li>
+<li>Earthquake Engineering</li>
+<li>Project Management</li>
+<li>Professional Elective</li>
+</ul>
+</div>
+
+<div class="card sem">
+<h3>Semester 8</h3>
+<ul>
+<li>Major Project</li>
+<li>Construction Planning</li>
+<li>Advanced Design</li>
+<li>Professional Practice</li>
+<li>Industrial Training</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="title">🧠 Core Skills</div>
+<div class="skills">
+<span class="skill">AutoCAD</span>
+<span class="skill">STAAD.Pro</span>
+<span class="skill">Revit</span>
+<span class="skill">Structural Design</span>
+<span class="skill">Surveying</span>
+<span class="skill">Construction Management</span>
+<span class="skill">Project Planning</span>
+<span class="skill">GIS</span>
+</div>
+</section>
+
+<section>
+<div class="title">🚀 Career Paths</div>
+<div class="careers">
+
+<div class="card career"><div class="icon">🏢</div><h3>Structural Engineer</h3><p>Design safe and reliable structures.</p></div>
+<div class="card career"><div class="icon">🛣️</div><h3>Transportation Engineer</h3><p>Work on highways, railways and transport systems.</p></div>
+<div class="card career"><div class="icon">🏗️</div><h3>Construction Manager</h3><p>Manage large construction projects.</p></div>
+<div class="card career"><div class="icon">💧</div><h3>Water Resources</h3><p>Design water and hydraulic systems.</p></div>
+<div class="card career"><div class="icon">🌱</div><h3>Environmental Engineer</h3><p>Develop sustainable environmental solutions.</p></div>
+<div class="card career"><div class="icon">📐</div><h3>CAD Engineer</h3><p>Create professional engineering drawings.</p></div>
+
+</div>
+</section>
+
+</div>
+
+<footer>
+CE HUB • Civil Engineering Knowledge Portal
+</footer>
+
+</body>
+</html>

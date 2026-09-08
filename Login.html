@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>College Portal Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:Arial, sans-serif;
+
+    background:#070b16;
+    color:white;
+
+    overflow:hidden;
+}
+
+/* BACKGROUND */
+
+.bg{
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 15% 20%, #4b35ff33, transparent 35%),
+    radial-gradient(circle at 85% 80%, #00c8ff2b, transparent 35%);
+
+    z-index:-2;
+}
+
+.grid{
+    position:fixed;
+    inset:0;
+
+    background-image:
+    linear-gradient(#ffffff08 1px, transparent 1px),
+    linear-gradient(90deg,#ffffff08 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    z-index:-1;
+}
+
+
+/* LOGIN CARD */
+
+.login-box{
+
+    width:410px;
+    max-width:92%;
+
+    padding:40px 35px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.16);
+
+    backdrop-filter:blur(25px);
+
+    box-shadow:
+    0 25px 80px #00000080;
+}
+
+
+/* LOGO */
+
+.logo{
+
+    width:75px;
+    height:75px;
+
+    margin:0 auto 20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:22px;
+
+    font-size:35px;
+
+    background:linear-gradient(
+        135deg,
+        #6655ff,
+        #00c8ff
+    );
+
+    box-shadow:
+    0 0 35px #6655ff55;
+}
+
+
+/* TITLE */
+
+h1{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    text-align:center;
+
+    color:#9da7bb;
+
+    font-size:14px;
+
+    margin-bottom:32px;
+}
+
+
+/* INPUT GROUP */
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:9px;
+
+    font-size:14px;
+
+    color:#cbd2df;
+}
+
+
+/* INPUT WRAPPER */
+
+.input-box{
+    position:relative;
+    width:100%;
+}
+
+
+/* ICON */
+
+.input-icon{
+
+    position:absolute;
+
+    left:15px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:18px;
+
+    pointer-events:none;
+
+    z-index:2;
+}
+
+
+/* INPUT */
+
+.input-box input{
+
+    display:block;
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 45px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.14);
+
+    outline:none;
+
+    background:rgba(0,0,0,.30);
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-family:Arial, sans-serif;
+
+    caret-color:#00c8ff;
+
+    position:relative;
+
+    z-index:1;
+}
+
+
+/* PLACEHOLDER */
+
+.input-box input::placeholder{
+    color:#70798c;
+}
+
+
+/* FOCUS */
+
+.input-box input:focus{
+
+    border-color:#7568ff;
+
+    box-shadow:
+    0 0 0 3px #7568ff20,
+    0 0 25px #7568ff20;
+}
+
+
+/* EYE BUTTON */
+
+.eye{
+
+    position:absolute;
+
+    right:15px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    z-index:5;
+
+    user-select:none;
+}
+
+
+/* OPTIONS */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:5px 0 25px;
+
+    color:#9ca6b8;
+
+    font-size:13px;
+}
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.remember input{
+
+    width:15px;
+
+    height:15px;
+
+    accent-color:#7163ff;
+
+    cursor:pointer;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        90deg,
+        #6655ff,
+        #00aeea
+    );
+
+    box-shadow:
+    0 10px 30px #465aff35;
+
+    transition:.3s;
+}
+
+.login-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 15px 35px #4696ff45;
+}
+
+.login-btn:active{
+    transform:scale(.98);
+}
+
+
+/* MESSAGE */
+
+#message{
+
+    text-align:center;
+
+    min-height:20px;
+
+    margin-top:17px;
+
+    font-size:13px;
+}
+
+
+/* FOOTER */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#70798d;
+
+    font-size:12px;
+}
+
+.footer span{
+    color:#8d81ff;
+}
+
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    .login-box{
+        padding:35px 25px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="bg"></div>
+
+<div class="grid"></div>
+
+
+<div class="login-box">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+        🎓
+    </div>
+
+
+    <!-- TITLE -->
+
+    <h1>
+        Welcome Back
+    </h1>
+
+    <p class="subtitle">
+        Sign in to your College Portal
+    </p>
+
+
+    <!-- USERNAME -->
+
+    <div class="input-group">
+
+        <label>
+            Username
+        </label>
+
+        <div class="input-box">
+
+            <span class="input-icon">
+                👤
+            </span>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+                autocomplete="username"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- PASSWORD -->
+
+    <div class="input-group">
+
+        <label>
+            Password
+        </label>
+
+        <div class="input-box">
+
+            <span class="input-icon">
+                🔐
+            </span>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+            >
+
+            <span
+                class="eye"
+                id="eye"
+                onclick="togglePassword()"
+            >
+                👁️
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- OPTIONS -->
+
+    <div class="options">
+
+        <label class="remember">
+
+            <input
+                type="checkbox"
+                id="remember"
+            >
+
+            Remember me
+
+        </label>
+
+        <span>
+            🔒 Secure Login
+        </span>
+
+    </div>
+
+
+    <!-- LOGIN BUTTON -->
+
+    <button
+        type="button"
+        class="login-btn"
+        onclick="login()"
+    >
+        LOGIN →
+    </button>
+
+
+    <!-- MESSAGE -->
+
+    <div id="message"></div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026
+        <span>College Portal</span>
+        • All Rights Reserved
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+/* =========================
+   SHOW / HIDE PASSWORD
+========================= */
+
+function togglePassword(){
+
+    const password =
+        document.getElementById("password");
+
+    const eye =
+        document.getElementById("eye");
+
+
+    if(password.type === "password"){
+
+        password.type = "text";
+
+        eye.innerHTML = "🙈";
+
+    }
+    else{
+
+        password.type = "password";
+
+        eye.innerHTML = "👁️";
+
+    }
+
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+function login(){
+
+    const username =
+        document.getElementById("username").value.trim();
+
+    const password =
+        document.getElementById("password").value.trim();
+
+    const message =
+        document.getElementById("message");
+
+
+    if(username === "" || password === ""){
+
+        message.style.color = "#ff7898";
+
+        message.innerHTML =
+        "⚠ Please enter username and password.";
+
+        return;
+    }
+
+
+    /* DEMO LOGIN */
+
+    if(
+        username === "student" &&
+        password === "12345"
+    ){
+
+        message.style.color = "#55f5b0";
+
+        message.innerHTML =
+        "✓ Login successful!";
+
+
+        setTimeout(function(){
+
+            window.location.href =
+            "index.html";
+
+        },1000);
+
+    }
+
+    else{
+
+        message.style.color = "#ff7898";
+
+        message.innerHTML =
+        "✕ Invalid username or password.";
+
+    }
+
+}
+
+
+/* ENTER KEY SUPPORT */
+
+document.getElementById("password")
+.addEventListener("keydown", function(event){
+
+    if(event.key === "Enter"){
+
+        login();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCA HUB - Master of Computer Applications</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    color:white;
+    background:
+    radial-gradient(circle at 15% 20%,#00d9ff35,transparent 30%),
+    radial-gradient(circle at 85% 75%,#3155ff35,transparent 30%),
+    #050914;
+}
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    filter:blur(90px);
+    z-index:-1;
+    animation:float 8s infinite alternate;
+}
+
+body::before{
+    background:#00d9ff25;
+    top:10%;
+    left:0;
+}
+
+body::after{
+    background:#5555ff25;
+    right:0;
+    bottom:5%;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    from{transform:translate(0,0);}
+    to{transform:translate(50px,-40px);}
+}
+
+header{
+    margin:20px;
+    padding:18px 25px;
+    border:1px solid #ffffff20;
+    border-radius:20px;
+    background:#ffffff0b;
+    backdrop-filter:blur(20px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 0 35px #00d9ff15;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#00e5ff;
+}
+
+.back{
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border:1px solid #00e5ff70;
+    border-radius:12px;
+}
+
+.hero{
+    text-align:center;
+    padding:65px 20px 45px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:30px;
+    color:#00e5ff;
+    background:#00e5ff12;
+    border:1px solid #00e5ff55;
+}
+
+h1{
+    font-size:clamp(40px,7vw,76px);
+    margin:22px 0 12px;
+    text-shadow:0 0 35px #00d9ff80;
+}
+
+.hero p{
+    color:#aebdca;
+    font-size:18px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#ffffff0b;
+    border:1px solid #ffffff18;
+    border-radius:22px;
+    padding:25px;
+    backdrop-filter:blur(18px);
+    box-shadow:0 10px 40px #0007;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#00e5ff75;
+    box-shadow:0 0 35px #00d9ff25;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat b{
+    display:block;
+    font-size:34px;
+    color:#00e5ff;
+}
+
+.stat span{
+    color:#9eafbd;
+}
+
+section{
+    margin:60px 0;
+}
+
+.title{
+    font-size:32px;
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.about{
+    color:#c9d5df;
+    line-height:1.9;
+}
+
+.semesters{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.sem h3{
+    color:#00e5ff;
+}
+
+.sem ul{
+    color:#c8d5df;
+    line-height:1.9;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    padding:11px 18px;
+    border-radius:30px;
+    background:#00e5ff10;
+    border:1px solid #00e5ff40;
+    color:#dffaff;
+}
+
+.careers{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.career{
+    text-align:center;
+}
+
+.icon{
+    font-size:44px;
+}
+
+.career h3{
+    color:#00e5ff;
+}
+
+footer{
+    text-align:center;
+    padding:45px;
+    color:#627481;
+}
+
+@media(max-width:800px){
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .semesters,
+    .careers{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">💻 MCA HUB</div>
+    <a href="index.html" class="back">← Back</a>
+</header>
+
+<div class="hero">
+
+    <div class="badge">
+        COMPUTER APPLICATIONS • SOFTWARE • TECHNOLOGY
+    </div>
+
+    <h1>Master of Computer Applications</h1>
+
+    <p>
+        Code • Develop • Innovate • Build the Future
+    </p>
+
+</div>
+
+<div class="container">
+
+<!-- STATS -->
+
+<div class="stats">
+
+    <div class="card stat">
+        <b>2</b>
+        <span>Years</span>
+    </div>
+
+    <div class="card stat">
+        <b>4</b>
+        <span>Semesters</span>
+    </div>
+
+    <div class="card stat">
+        <b>40+</b>
+        <span>Core Subjects</span>
+    </div>
+
+    <div class="card stat">
+        <b>∞</b>
+        <span>Career Paths</span>
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section>
+
+    <div class="title">🧠 About MCA</div>
+
+    <div class="card about">
+
+        Master of Computer Applications (MCA) is a postgraduate program
+        focused on advanced computer applications, programming, software
+        development, databases, networking, cloud computing, artificial
+        intelligence and modern technologies.
+
+        <br><br>
+
+        MCA prepares students to design, develop and manage modern software
+        systems and technology-driven applications.
+
+    </div>
+
+</section>
+
+
+<!-- SEMESTERS -->
+
+<section>
+
+    <div class="title">📚 4 Semester Journey</div>
+
+    <div class="semesters">
+
+        <div class="card sem">
+
+            <h3>Semester 1</h3>
+
+            <ul>
+                <li>Advanced Programming</li>
+                <li>Computer Architecture</li>
+                <li>Database Management Systems</li>
+                <li>Mathematical Foundations</li>
+                <li>Web Technologies</li>
+                <li>Computer Organization</li>
+            </ul>
+
+        </div>
+
+
+        <div class="card sem">
+
+            <h3>Semester 2</h3>
+
+            <ul>
+                <li>Data Structures</li>
+                <li>Object Oriented Programming</li>
+                <li>Operating Systems</li>
+                <li>Computer Networks</li>
+                <li>Software Engineering</li>
+                <li>Advanced Database Systems</li>
+            </ul>
+
+        </div>
+
+
+        <div class="card sem">
+
+            <h3>Semester 3</h3>
+
+            <ul>
+                <li>Artificial Intelligence</li>
+                <li>Cloud Computing</li>
+                <li>Cyber Security</li>
+                <li>Data Analytics</li>
+                <li>Mobile Application Development</li>
+                <li>Machine Learning</li>
+            </ul>
+
+        </div>
+
+
+        <div class="card sem">
+
+            <h3>Semester 4</h3>
+
+            <ul>
+                <li>Major Project</li>
+                <li>Industrial Training</li>
+                <li>Advanced Computing</li>
+                <li>Project Management</li>
+                <li>Research Methodology</li>
+                <li>Professional Practice</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section>
+
+    <div class="title">🛠️ Core Skills</div>
+
+    <div class="skills">
+
+        <span class="skill">Python</span>
+        <span class="skill">Java</span>
+        <span class="skill">C++</span>
+        <span class="skill">SQL</span>
+        <span class="skill">HTML / CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Cloud Computing</span>
+        <span class="skill">AI / ML</span>
+        <span class="skill">Cyber Security</span>
+
+    </div>
+
+</section>
+
+
+<!-- CAREERS -->
+
+<section>
+
+    <div class="title">🚀 Career Paths</div>
+
+    <div class="careers">
+
+        <div class="card career">
+            <div class="icon">💻</div>
+            <h3>Software Developer</h3>
+            <p>Build modern software applications.</p>
+        </div>
+
+        <div class="card career">
+            <div class="icon">🌐</div>
+            <h3>Web Developer</h3>
+            <p>Create professional web applications.</p>
+        </div>
+
+        <div class="card career">
+            <div class="icon">☁️</div>
+            <h3>Cloud Engineer</h3>
+            <p>Work with cloud infrastructure and services.</p>
+        </div>
+
+        <div class="card career">
+            <div class="icon">🔐</div>
+            <h3>Cyber Security</h3>
+            <p>Help protect digital systems and data.</p>
+        </div>
+
+        <div class="card career">
+            <div class="icon">📊</div>
+            <h3>Data Analyst</h3>
+            <p>Analyze information and generate insights.</p>
+        </div>
+
+        <div class="card career">
+            <div class="icon">🤖</div>
+            <h3>AI Developer</h3>
+            <p>Develop intelligent technology solutions.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+    MCA HUB • Advanced Computer Applications Portal
+</footer>
+
+</body>
+</html>
